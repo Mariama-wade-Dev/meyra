@@ -1,12 +1,13 @@
 import { ArrowUp } from 'lucide-react'
 import { navItems, site } from '../content/site'
+import { asset } from '../lib/asset'
 
 export default function Footer() {
   return (
     <footer className="on-dark bg-prune text-ivory">
       <div className="container-x grid gap-10 py-14 md:grid-cols-12">
         <div className="md:col-span-5">
-          <img src="/images/brand/logo-ivory.png" alt="MËYRA" width={900} height={829} className="h-28 w-auto" loading="lazy" />
+          <img src={asset('/images/brand/logo-ivory.png')} alt="MËYRA" width={900} height={829} className="h-28 w-auto" loading="lazy" />
           <p className="mt-4 font-serif text-xl italic text-ivory/85">{site.baseline}</p>
         </div>
         <nav aria-label="Pied de page" className="md:col-span-4">

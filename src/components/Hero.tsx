@@ -2,6 +2,7 @@ import { ArrowRight, MessageCircle } from 'lucide-react'
 import { services } from '../content/services'
 import { site, whatsappLink } from '../content/site'
 import { Reveal, GroupIcon } from './ui'
+import { asset } from '../lib/asset'
 
 export default function Hero() {
   return (
@@ -64,7 +65,7 @@ export default function Hero() {
               <div aria-hidden className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-prune-700/60" />
               <div className="relative grid h-full place-items-center px-10">
                 <img
-                  src="/images/brand/symbol-ivory.png"
+                  src={asset('/images/brand/symbol-ivory.png')}
                   alt="Monogramme MËYRA"
                   width={900}
                   height={627}

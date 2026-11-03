@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle2, Download, Mail, MapPin, MessageCircle, Phone,
 import { site, whatsappLink } from '../content/site'
 import { QUOTE_EVENT, type QuoteDetail } from '../lib/quote'
 import { Reveal, SectionHeading } from './ui'
+import { asset } from '../lib/asset'
 
 const SUBJECTS = [
   'Développement web',
@@ -166,7 +167,7 @@ export default function Contact() {
               )}
 
               {site.cvFile && (
-                <a href={site.cvFile} download className="btn btn-outline btn-sm mt-8">
+                <a href={asset(site.cvFile)} download className="btn btn-outline btn-sm mt-8">
                   <Download className="h-4 w-4" aria-hidden /> Télécharger mon CV
                 </a>
               )}

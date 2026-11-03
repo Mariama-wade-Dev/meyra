@@ -1,5 +1,6 @@
 import type { Project } from '../types'
 import { GroupIcon } from './ui'
+import { asset } from '../lib/asset'
 
 const iconFor: Record<Project['category'], 'code' | 'palette' | 'megaphone' | 'sparkles'> = {
   'Développement web': 'code',
@@ -14,7 +15,7 @@ export default function ProjectCover({ project, index }: { project: Project; ind
   if (first) {
     return (
       <div className="relative h-full w-full bg-ivory-200">
-        <img src={first.src} alt={first.alt} className="absolute inset-0 h-full w-full object-contain p-6" loading="lazy" />
+        <img src={asset(first.src)} alt={first.alt} className={`absolute inset-0 h-full w-full ${first.fit === 'cover' ? 'object-cover' : 'object-contain p-3'}`} loading="lazy" />
       </div>
     )
   }

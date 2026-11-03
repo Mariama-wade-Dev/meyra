@@ -3,6 +3,7 @@ import { ArrowRight, ExternalLink, ImageOff, X } from 'lucide-react'
 import type { Project } from '../types'
 import { requestQuote } from '../lib/quote'
 import ProjectCover from './ProjectCover'
+import { asset } from '../lib/asset'
 
 export default function ProjectModal({
   project,
@@ -47,7 +48,7 @@ export default function ProjectModal({
             <div className="aspect-[16/9] w-full overflow-hidden sm:aspect-[21/9]">
               {images.length > 0 ? (
                 <div className="relative h-full w-full bg-ivory-200">
-                  <img src={images[shot].src} alt={images[shot].alt} className="absolute inset-0 h-full w-full object-contain p-4" />
+                  <img src={asset(images[shot].src)} alt={images[shot].alt} className="absolute inset-0 h-full w-full object-contain p-4" />
                 </div>
               ) : (
                 <ProjectCover project={p} index={index} />
@@ -74,7 +75,7 @@ export default function ProjectModal({
                     aria-current={i === shot}
                     className={`h-14 w-20 overflow-hidden rounded-lg ring-2 ${i === shot ? 'ring-terracotta' : 'ring-transparent'}`}
                   >
-                    <img src={im.src} alt="" className="h-full w-full object-cover" />
+                    <img src={asset(im.src)} alt="" className="h-full w-full object-cover" />
                   </button>
                 </li>
               ))}

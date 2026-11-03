@@ -1,6 +1,7 @@
 import type { CSSProperties, ElementType, ReactNode } from 'react'
 import { Code2, Megaphone, Palette, Sparkles } from 'lucide-react'
 import { useReveal } from '../hooks/useReveal'
+import { asset } from '../lib/asset'
 
 export function Reveal({
   children,
@@ -53,7 +54,7 @@ export function GroupIcon({ name, className = 'h-6 w-6' }: { name: keyof typeof 
 export function Logo({ variant = 'prune', className = 'h-10' }: { variant?: 'prune' | 'ivory'; className?: string }) {
   return (
     <img
-      src={`/images/brand/symbol-${variant}.png`}
+      src={asset(`/images/brand/symbol-${variant}.png`)}
       alt=""
       className={`w-auto ${className}`}
       width={900}

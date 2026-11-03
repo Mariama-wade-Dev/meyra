@@ -1,6 +1,7 @@
 import { ExternalLink, FileText, GraduationCap, Award, BookOpen } from 'lucide-react'
 import { certificates, timeline } from '../content/journey'
 import { Reveal, SectionHeading } from './ui'
+import { asset } from '../lib/asset'
 
 const groupIcons = [GraduationCap, BookOpen, Award]
 const isImage = (f: string) => /\.(png|jpe?g|webp|avif)$/i.test(f)
@@ -65,13 +66,13 @@ export default function Journey() {
               <Reveal as="li" key={c.title} delay={i * 70}>
                 {c.file ? (
                   <a
-                    href={c.file}
+                    href={asset(c.file)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group block h-full overflow-hidden rounded-2xl bg-ivory ring-1 ring-prune/10 transition hover:-translate-y-1 hover:shadow-lg"
                   >
                     {isImage(c.file) ? (
-                      <img src={c.file} alt={`Certificat ${c.title}`} className="aspect-[4/3] w-full object-cover" loading="lazy" />
+                      <img src={asset(c.file)} alt={`Certificat ${c.title}`} className="aspect-[4/3] w-full object-cover" loading="lazy" />
                     ) : (
                       <div className="grid aspect-[4/3] place-items-center bg-prune text-ivory">
                         <FileText className="h-10 w-10" aria-hidden strokeWidth={1.4} />

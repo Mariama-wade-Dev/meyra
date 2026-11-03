@@ -35,7 +35,7 @@ export const projects: Project[] = [
       ],
     },
     tech: ['React', 'TypeScript', 'Vite', 'Node.js', 'Express', 'PostgreSQL', 'Supabase'],
-    images: [],
+    images: [{ src: '/images/projects/sope-naby-logo.jpg', alt: 'Logo du Groupe Sope Naby', fit: 'cover' }],
     placeholderNote: 'Captures d’écran du site à ajouter.',
   },
   {
@@ -66,11 +66,12 @@ export const projects: Project[] = [
     summary: 'Participation à un projet numérique nommé Tayeur, dans le cadre de mon expérience en développement web.',
     description: [
       'Participation à un projet numérique appelé Tayeur dans le cadre de mon expérience en développement web.',
-      'La description détaillée, les fonctionnalités, les technologies et les captures d’écran seront ajoutées prochainement.',
+      'Aperçu : la page de création de compte de la plateforme (« Commandez sur mesure »), avec choix du type de compte et inscription par e-mail ou via Google.',
+      'La description détaillée, les fonctionnalités et les technologies seront ajoutées prochainement.',
     ],
     tech: [],
-    images: [],
-    placeholderNote: 'Description, fonctionnalités, technologies et captures à ajouter.',
+    images: [{ src: '/images/projects/tayeur-inscription.jpg', alt: 'Page de création de compte de la plateforme Tayeur, couture africaine sur mesure', fit: 'cover' }],
+    placeholderNote: 'Description, fonctionnalités et technologies à ajouter.',
   },
   {
     id: 'communication-immobilier',

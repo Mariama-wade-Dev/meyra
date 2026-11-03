@@ -2,6 +2,7 @@ import { Quote } from 'lucide-react'
 import { about } from '../content/about'
 import { site } from '../content/site'
 import { Reveal, SectionHeading } from './ui'
+import { asset } from '../lib/asset'
 
 export default function About() {
   return (
@@ -12,12 +13,12 @@ export default function About() {
             <div aria-hidden className="absolute -bottom-5 -left-5 h-full w-full rounded-[2rem] border-2 border-terracotta/60" />
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-prune">
               {site.portrait ? (
-                <img src={site.portrait} alt={`Portrait de ${site.owner}`} className="h-full w-full object-cover" loading="lazy" />
+                <img src={asset(site.portrait)} alt={`Portrait de ${site.owner}`} className="h-full w-full object-cover" loading="lazy" />
               ) : (
                 <div className="grid h-full place-items-center p-12">
                   <div aria-hidden className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-prune-700/60" />
                   <div aria-hidden className="absolute -bottom-20 -left-10 h-60 w-60 rounded-full bg-terracotta/90" />
-                  <img src="/images/brand/symbol-ivory.png" alt="" width={900} height={627} className="relative w-full max-w-[15rem]" />
+                  <img src={asset('/images/brand/symbol-ivory.png')} alt="" width={900} height={627} className="relative w-full max-w-[15rem]" />
                 </div>
               )}
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-prune-900/85 to-transparent p-6 pt-16 text-ivory">

@@ -22,6 +22,8 @@ export interface ProjectImage {
   /** Chemin dans /public, ex. "/images/projects/sope-naby-1.jpg" */
   src: string
   alt: string
+  /** Affichage sur la carte : 'cover' remplit le cadre (recadré), 'contain' montre l'image entière (défaut). */
+  fit?: 'cover' | 'contain'
 }
 
 export interface Project {

@@ -34,6 +34,8 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   const siteUrl = env.VITE_SITE_URL || 'https://meyra.example'
   return {
+    // Adresse de base : '/' par défaut ; '/meyra/' pour GitHub Pages (définie par le workflow)
+    base: env.VITE_BASE || '/',
     plugins: [react(), tailwindcss(), siteUrlPlugin(siteUrl), seoFilesPlugin(siteUrl)],
     build: { target: 'es2020', sourcemap: false },
   }
